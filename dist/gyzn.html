@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公益助农 - 乡村学子云端公益助学平台</title>
+<style>
+/* 核心：用 flex 布局让页面自动占满高度，footer 贴底 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* 页面整体容器：flex 垂直布局，占满屏幕 */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+/* 内容区：自动填充剩余空间，footer 自然贴底 */
+.content {
+  flex: 1;
+  padding: 0 30px 20px; /* 底部留空白，避免和 footer 贴太近 */
+}
+/* 头部 */
+.header {
+  height: 120px;
+  background: #036;
+  color: white;
+  line-height: 120px;
+  padding-left: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+/* 导航 */
+.nav {
+  background: #045a9b;
+  overflow: hidden;
+}
+.nav a {
+  color: white;
+  padding: 15px 25px;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav a:hover {
+  background: #036;
+}
+/* 盒子样式 */
+.box {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+.box-title {
+  background: #045a9b;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+/* 左右分栏 */
+.split-container {
+  display: flex;
+  gap: 0;
+}
+.split-left, .split-right {
+  width: 50%;
+  padding: 30px;
+}
+.split-left {
+  border-right: 1px solid #ddd;
+}
+/* 图片展示区样式 */
+.help-farm-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.help-farm-img img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+/* footer：固定显示在底部，不会消失 */
+.footer {
+  background: #036;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* 关键：自动贴到底部 */
+}
+</style>
+</head>
+<body>
+<!-- 整体 wrapper 包裹所有内容 -->
+<div class="wrapper">
+  <!-- 头部 -->
+  <div class="header">乡村学子云端公益助学平台</div>
+  <!-- 导航 -->
+  <div class="nav">
+    <a href="index.html">首页</a>
+    <a href="yzbx.html">云伴助学</a>
+    <a href="jzkt.html">家长课堂</a>
+    <a href="yybl.html">云游博览</a>
+    <a href="aqjy.html">安全教育</a>
+    <a href="xlhh.html">心灵护航</a>
+    <a href="gyzn.html">公益助农</a>
+    <a href="lxwm.html">联系我们</a>
+  </div>
+  <!-- 内容区 -->
+  <div class="content">
+    <div class="box">
+      <div class="box-title">公益助农</div>
+      <div class="split-container">
+        <!-- 左侧文字区 -->
+        <div class="split-left">
+          <h3 style="font-size: 26px; margin-bottom: 20px;">公益助农</h3>
+          <p style="font-size: 20px; line-height: 1.8;">
+            公益助农旨在帮扶乡村农户拓宽农产品销路，以消费助农的方式助力乡村振兴，让优质农产走出大山，同时为助学事业凝聚更多力量。
+          </p>
+        </div>
+        <!-- 右侧图片区 -->
+        <div class="split-right">
+          <h3 style="font-size: 26px; margin-bottom: 20px;">助农成果展示</h3>
+          <div class="help-farm-img">
+            <!-- 替换为实际图片路径，可增减图片数量 -->
+            <img src="gyzn_1.jpg" alt="公益助农-农产品实拍">
+            <img src="gyzn_2.jpg" alt="公益助农-农户采摘">
+            <img src="gyzn_3.jpg" alt="公益助农-物流发货">
+            <img src="gyzn_4.jpg" alt="公益助农-乡村丰收">
+            <img src="gyzn_5.jpg" alt="公益助农-农户采摘">
+            <img src="gyzn_6.jpg" alt="公益助农-物流发货">
+            <img src="gyzn_7.jpg" alt="公益助农-乡村丰收">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer：稳稳显示在底部 -->
+  <div class="footer">乡村学子云端公益助学平台 版权所有 © 2026</div>
+</div>
+</body>
+</html>
