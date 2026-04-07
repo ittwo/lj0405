@@ -2,25 +2,111 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>家长课堂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家长课堂 - 乡村学子云端公益助学平台</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
-body{background:#f5f7fa}
-.wrap{width:1100px;margin:0 auto;background:#fff}
-.header{height:110px;background:#003366;color:#fff;line-height:110px;padding:0 30px;font-size:26px;font-weight:bold}
-.nav{background:#005599;display:flex;flex-wrap:wrap}
-.nav a{color:#fff;padding:14px 24px;text-decoration:none}
-.nav a:hover{background:#003366}
-.main{padding:30px 25px;line-height:1.9;font-size:15px}
-.main h2{margin-bottom:15px;color:#003366;border-left:4px solid #005599;padding-left:10px}
-.footer{background:#003366;color:#fff;text-align:center;padding:25px}
+/* 核心：用 flex 布局让页面自动占满高度，footer 贴底 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* 页面整体容器：flex 垂直布局，占满屏幕 */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+/* 内容区：自动填充剩余空间，footer 自然贴底 */
+.content {
+  flex: 1;
+  padding: 0 30px 20px; /* 底部留空白，避免和 footer 贴太近 */
+}
+/* 头部 */
+.header {
+  height: 120px;
+  background: #036;
+  color: white;
+  line-height: 120px;
+  padding-left: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+/* 导航 */
+.nav {
+  background: #045a9b;
+  overflow: hidden;
+}
+.nav a {
+  color: white;
+  padding: 15px 25px;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav a:hover {
+  background: #036;
+}
+/* 盒子样式 */
+.box {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+.box-title {
+  background: #045a9b;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+/* 左右分栏 */
+.split-container {
+  display: flex;
+  gap: 0;
+}
+.split-left, .split-right {
+  width: 50%;
+  padding: 30px;
+}
+.split-left {
+  border-right: 1px solid #ddd;
+}
+.split-right ul {
+  list-style: none;
+  padding: 0;
+}
+.split-right li {
+  margin: 12px 0;
+}
+.split-right a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 20px;
+}
+.split-right a:hover {
+  color: #005599;
+}
+/* footer：固定显示在底部，不会消失 */
+.footer {
+  background: #036;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* 关键：自动贴到底部 */
+}
 </style>
 </head>
 <body>
-<div class="wrap">
+<!-- 整体 wrapper 包裹所有内容 -->
+<div class="wrapper">
+  <!-- 头部 -->
   <div class="header">乡村学子云端公益助学平台</div>
+  <!-- 导航 -->
   <div class="nav">
     <a href="index.html">首页</a>
+    <a href="yzbx.html">云伴助学</a>
     <a href="jzkt.html">家长课堂</a>
     <a href="yybl.html">云游博览</a>
     <a href="aqjy.html">安全教育</a>
@@ -28,13 +114,31 @@ body{background:#f5f7fa}
     <a href="gyzn.html">公益助农</a>
     <a href="lxwm.html">联系我们</a>
   </div>
-  <div class="main">
-    <h2>家长课堂</h2>
-    <p>家长课堂……</p>
-    <p>家长课堂。</p>
-    <p>家长课堂。</p>
+  <!-- 内容区 -->
+  <div class="content">
+    <div class="box">
+      <div class="box-title">家长课堂</div>
+      <div class="split-container">
+        <div class="split-left">
+          <h3 style="font-size: 26px; margin-bottom: 20px;">家庭教育指导</h3>
+          <p style="font-size: 20px; line-height: 1.8;">
+            以线上平台为纽带，连接学校、家庭与社会力量，为<br>
+            乡村家庭提供普惠、便捷、实用的家庭教育指导科学<br>
+            知识。
+          </p>
+        </div>
+        <div class="split-right">
+          <h3 style="font-size: 26px; margin-bottom: 20px;">家长课堂:</h3>
+          <ul>
+            <li><a href="#">云端家长课堂</a></li>
+            <li><a href="#">亲子云陪伴行动</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="footer">乡村学子云端公益助学平台 © 2026 版权所有</div>
+  <!-- footer：稳稳显示在底部 -->
+  <div class="footer">乡村学子云端公益助学平台 版权所有 © 2026</div>
 </div>
 </body>
 </html>
